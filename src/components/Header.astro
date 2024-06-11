@@ -14,7 +14,7 @@ const {titulo, itens} = Astro.props
       {itens.map( item => { 
         return (
           <li class="hover:font-black">
-            <a href="">{item}</a>
+            <a href={`${item}`}>{item}</a>
           </li>
         )
       })}
