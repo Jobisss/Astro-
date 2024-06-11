@@ -1,0 +1,24 @@
+---
+interface Props {
+  titulo: string,
+  itens: Array<String>,
+}
+
+const {titulo, itens} = Astro.props
+---
+
+<nav class="w-screen h-32 flex justify-around bg-slate-500 text-xl">
+  <h1>{titulo}</h1>
+  <div>
+    <ul class="w-28">
+      {itens.map( item => { 
+        return (
+          <li class="hover:font-black">
+            <a href="">{item}</a>
+          </li>
+        )
+      })}
+    </ul>
+    
+  </div>
+</nav>
